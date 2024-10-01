@@ -46,6 +46,9 @@ raw_records = get_raw_records()
 Note, this takes about 2 hours when it's run since each page only includes 10 records
 and there's on the scale of 30K records (i.e., 3,000 requests need to be made).
 
+The data is also uploaded to Zenodo under the CC BY 4.0 license at
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13869529.svg)](https://doi.org/10.5281/zenodo.13869529).
+
 Later, this package will implement a way to normalize the data from these
 records to be more comfortable to work with (e.g., removing missing records, 
 annotating ORCID identifiers for authors, making better key names).
