@@ -1,0 +1,25 @@
+{
+  "template": "https://github.com/cthoyt/cookiecutter-snekpack",
+  "commit": "900ef65f0ad637bb02037d8cd66d0fa8436a236c",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "package_name": "biotools_client",
+      "package_name_stylized": "bio.tools Client",
+      "short_description": "An API client to bio.tools",
+      "author_name": "Charles Tapley Hoyt",
+      "author_email": "cthoyt@gmail.com",
+      "github_organization_name": "cthoyt",
+      "github_repository_name": "biotools-client",
+      "command_line_interface": true,
+      "gitlab": false,
+      "runner": "tox",
+      "__runner": "tox -e",
+      "__runner_pip": "tox tox-uv",
+      "__runner_tests": "py",
+      "__gh_slug": "cthoyt/biotools-client",
+      "_template": "https://github.com/cthoyt/cookiecutter-snekpack"
+    }
+  },
+  "directory": null
+}
