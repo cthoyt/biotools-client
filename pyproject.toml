@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "biotools_client"
-version = "0.0.1-dev"
+version = "0.0.1"
 description = "An API client to bio.tools"
 readme = "README.md"
 authors = [
