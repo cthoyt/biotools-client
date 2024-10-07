@@ -13,7 +13,7 @@ It comes with the following:
   - Reproducible tests with ``pytest``
   - A command line interface with ``click``
   - Reproducible notebooks with `treon <https://github.com/reviewNB/treon>`_
-  - Documentation build with ``sphinx``
+  - Documentation build with ``sphinx`` 8.0 and ``sphinx-rtd-theme`` 3.0
   - Testing of code quality with ``ruff``
   - Testing of documentation coverage with ``docstr-coverage``
   - Testing of documentation format
@@ -21,7 +21,7 @@ It comes with the following:
   - Testing of MANIFEST correctness with ``check-manifest``
   - Testing of optional static typing with ``mypy``
   - Version management with ``bump2version``
-  - Building with ``build[uv]``
+  - Building with ``uv build``
   - Releasing to PyPI with ``twine``
 - A command line interface with ``click``
 - A vanity CLI via python entrypoints
