@@ -14,7 +14,7 @@ import requests
 from tqdm import tqdm
 
 __all__ = [
-    "get_raw_records",
+    "get_raw_biotools_records",
     "get_biotools_to_orcids",
 ]
 
@@ -32,7 +32,7 @@ def _request(page: int) -> dict[str, Any]:
     return cast(dict[str, Any], res_json)
 
 
-def get_raw_records(force: bool = False) -> list[dict[str, Any]]:
+def get_raw_biotools_records(force: bool = False) -> list[dict[str, Any]]:
     """Get raw records from the `bio.tools API <https://bio.tools/api/tool/>`_."""
     if PATH.is_file() and not force:
         return cast(list[dict[str, Any]], json.loads(PATH.read_text()))
@@ -67,7 +67,7 @@ def get_biotools_to_orcids() -> dict[str, set[str]]:
 def _get_credits(raw_records: list[dict[str, Any]] | None = None) -> dict[str, dict[str, str]]:
     """Get a mapping from bio.tools identifiers to ORCID identifier to name."""
     if raw_records is None:
-        raw_records = get_raw_records()
+        raw_records = get_raw_biotools_records()
     rv: defaultdict[str, dict[str, str]] = defaultdict(dict)
     for record in raw_records:
         for author in record.get("credit", []):

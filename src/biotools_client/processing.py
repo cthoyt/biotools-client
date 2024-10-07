@@ -9,7 +9,7 @@ from orcid_downloader import ground_researcher_unambiguous
 from pydantic import BaseModel
 from tqdm import tqdm
 
-from biotools_client.api import NAMES, ORCIDS, _get_credits, get_raw_records
+from biotools_client.api import NAMES, ORCIDS, _get_credits, get_raw_biotools_records
 
 
 def count_names(raw_records: list[dict[str, Any]]) -> Counter[str]:
@@ -106,13 +106,13 @@ def _process_publications(raw_publications: list[dict[str, Any]]) -> list[Public
 def iter_biotools_records() -> Iterator[Record]:
     """Iterate over processed records."""
     for record in tqdm(
-        get_raw_records(), unit="record", unit_scale=True, desc="Standardizing bio.tools"
+        get_raw_biotools_records(), unit="record", unit_scale=True, desc="Standardizing bio.tools"
     ):
         yield _process(record)
 
 
 def _main() -> None:
-    raw_records = get_raw_records()
+    raw_records = get_raw_biotools_records()
     counter = count_names(raw_records)
     with NAMES.open("w") as file:
         print("name", "count", sep="\t", file=file)

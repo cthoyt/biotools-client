@@ -25,9 +25,9 @@ __all__ = [
 def main(force: bool) -> None:
     """CLI for biotools_client."""
     # import inside the CLI to make running the --help command faster
-    from .api import get_raw_records
+    from .api import get_raw_biotools_records
 
-    get_raw_records(force=force)
+    get_raw_biotools_records(force=force)
 
 
 if __name__ == "__main__":

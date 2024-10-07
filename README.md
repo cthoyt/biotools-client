@@ -38,9 +38,9 @@ so this package implements an API wrapper to get the data in bulk.
 ## 💪 Getting Started
 
 ```python
-from biotools_client import get_raw_records
+from biotools_client import get_raw_biotools_records
 
-raw_records = get_raw_records()
+raw_records = get_raw_biotools_records()
 ```
 
 Note, this takes about 2 hours when it's run since each page only includes 10 records
